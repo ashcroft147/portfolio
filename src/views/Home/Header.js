@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './HomeHeader.css';
+import './Header.css';
 import * as firebase from 'firebase';
 
-class HomeHeader extends Component {
+class Header extends Component {
 
   constructor() {
     super();
@@ -37,4 +37,4 @@ class HomeHeader extends Component {
   }
 }
 
-export default HomeHeader;
+export default Header;

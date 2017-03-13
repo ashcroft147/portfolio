@@ -1,0 +1,42 @@
+.footer {
+  text-align: center;
+  background-color: #2a3b4e; 
+  padding-top: 20px;
+  height: 280px;
+}
+
+.social a i {
+  margin-top: 8px;
+  letter-spacing: 0.5cm;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 40px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  line-height: 20px!important;
+}
+
+.fa-facebook-square {
+	color: #3b5998;
+}
+
+.fa-wordpress {
+	color: #ffffff;
+}
+
+.fa-tumblr-square {
+	color: #34526f;
+}
+
+.fa-pinterest-square {
+	color: #c92228;
+}
+
+.footer-copyright {
+	margin-top: 8px;
+	font-size: 20px;
+	color: #ffffff;
+}

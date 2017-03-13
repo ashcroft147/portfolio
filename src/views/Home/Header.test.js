@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HomeHeader from './HomeHeader';
+import Header from './Header';
 import * as firebase from 'firebase';
 
 // Initialize Firebase
@@ -16,5 +16,5 @@ firebase.initializeApp(config);
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<HomeHeader />, div);
+    ReactDOM.render(<Header />, div);
 });
