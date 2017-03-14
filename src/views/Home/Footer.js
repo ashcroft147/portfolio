@@ -5,7 +5,7 @@ class Footer extends Component {
 
   render() {
     return (
-		<footer>
+		<footer id="footer">
 			<div className="footer">
 				<div className="col-md-12 social row">
 					<a className="bg-facebook" href="https://www.facebook.com/ashcroft147" target="_blank" title="facebook">

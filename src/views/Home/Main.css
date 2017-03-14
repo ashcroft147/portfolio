@@ -1,0 +1,15 @@
+#top {
+  text-align: center;
+  background-color: cornsilk;
+  height: 150px;
+  padding: 20px;
+  color: black;  
+}
+
+#middle {
+  text-align: center;
+  background-color: #ffffff;
+  height: 450px;
+  padding: 20px;
+  color: black;  
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import gjstamp from './GJstamp_star.svg';
 import './Header.css';
 import * as firebase from 'firebase';
 
@@ -24,13 +24,31 @@ class Header extends Component {
 
   render() {
     return (
-		<header>
-			<div className="Header">
-					<img src={logo} className="Header-logo" alt="logo" />
-					<h2>Welcome to Kim's Portfolio</h2>
-				{/*
-				<h1>{this.state.speed}</h1-->
-				*/}
+		<header id="header">
+			<div className="header">
+          		<img src={gjstamp} className="header-logo col-md-2" alt="logo" />
+				<nav id="nav" class="menu">
+					<ul id="menu-nav">
+						<li id="menu-item-home">
+							<a title="Home" href="/">HOME</a>
+						</li>
+						<li id="menu-item-about">
+							<a title="About" href="/about">ABOUT</a>
+						</li>
+						<li id="menu-item-portfolio">
+							<a title="About" href="/about">PORTFOLIO</a>
+						</li>	
+						<li id="menu-item-blog">
+							<a title="About" href="/about">BLOG</a>
+						</li>	
+						<li id="menu-item-github">
+							<a title="About" href="/about">GITHUB</a>
+						</li>	
+						<li id="menu-item-contact">
+							<a title="About" href="/about">CONTACT</a>
+						</li>																									
+					</ul>
+				</nav>
 			</div>
 		</header>
     );
