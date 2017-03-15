@@ -1,6 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './views/Home/App';
+import App from './App';
+import HomeContainer from './container/HomeContainer';
+import AboutContainer from './container/AboutContainer';
+import PortfolioContainer from './container/PortfolioContainer';
+import BlogContainer from './container/BlogContainer';
+import GithubContainer from './container/GithubContainer';
+import ContactContainer from './container/ContactContainer';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import './index.css';
 import * as firebase from 'firebase';
 
@@ -16,6 +23,16 @@ var config = {
 firebase.initializeApp(config);
 
 ReactDOM.render(
-  <App />,
+  <Router history={browserHistory}>
+	  <Route path="/" component={App}>
+	  	<IndexRoute component={HomeContainer}/>
+		<Route path="about" component={AboutContainer}/>
+		<Route path="portfolio" component={PortfolioContainer}/>
+		<Route path="blog" component={BlogContainer}/>
+		<Route path="github" component={GithubContainer}/>
+		<Route path="contact" component={ContactContainer}/>
+	  </Route>
+  </Router>
+  ,
   document.getElementById('root')
 );

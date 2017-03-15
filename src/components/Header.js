@@ -27,7 +27,7 @@ class Header extends Component {
 		<header id="header">
 			<div className="header">
           		<img src={gjstamp} className="header-logo col-md-2" alt="logo" />
-				<nav id="nav" class="menu">
+				<nav id="nav" className="menu">
 					<ul id="menu-nav">
 						<li id="menu-item-home">
 							<a title="Home" href="/">HOME</a>
@@ -36,23 +36,33 @@ class Header extends Component {
 							<a title="About" href="/about">ABOUT</a>
 						</li>
 						<li id="menu-item-portfolio">
-							<a title="About" href="/about">PORTFOLIO</a>
+							<a title="Portfolio" href="/portfolio">PORTFOLIO</a>
 						</li>	
 						<li id="menu-item-blog">
-							<a title="About" href="/about">BLOG</a>
+							<a title="Blog" href="/blog">BLOG</a>
 						</li>	
 						<li id="menu-item-github">
-							<a title="About" href="/about">GITHUB</a>
+							<a title="Github" href="/github">GITHUB</a>
 						</li>	
 						<li id="menu-item-contact">
-							<a title="About" href="/about">CONTACT</a>
+							<a title="Contact" href="/contact">CONTACT</a>
 						</li>																									
 					</ul>
 				</nav>
 			</div>
+			<HeaderMsg />
 		</header>
     );
   }
 }
+
+const HeaderMsg = () => {
+	return (
+			<div>
+				<h2>Header Msg</h2>
+			</div>
+	);
+};
+
 
 export default Header;
