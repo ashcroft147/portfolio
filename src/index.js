@@ -13,11 +13,11 @@ import * as firebase from 'firebase';
 
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyBh95mLLrG7CCD5Ts810guFuP-HMXVwuss",
-    authDomain: "portpolio-16967.firebaseapp.com",
-    databaseURL: "https://portpolio-16967.firebaseio.com",
-    storageBucket: "portpolio-16967.appspot.com",
-    messagingSenderId: "54643699999"
+    apiKey: "AIzaSyDDSfJaCqK10MaBHPIMqQ5yyQ8kWEJD4rE",
+    authDomain: "portfolio-2a4e2.firebaseapp.com",
+    databaseURL: "https://portfolio-2a4e2.firebaseio.com",
+    storageBucket: "portfolio-2a4e2.appspot.com",
+    messagingSenderId: "667002217775"
 };
 
 firebase.initializeApp(config);

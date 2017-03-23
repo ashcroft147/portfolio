@@ -1,27 +1,28 @@
 import React, { Component } from 'react';
 import gjstamp from './GJstamp_star.svg';
 import './Header.css';
-import * as firebase from 'firebase';
+//import * as firebase from 'firebase';
 
 class Header extends Component {
 
+/*
   constructor() {
     super();
     this.state = {
-      speed: 20
+      introduction: ""
     };
   }
  
-  componentDidMount() {   
-    const rootRef = firebase.database().ref().child('react');
-    const speedRef = rootRef.child('speed');
-    speedRef.on('value', snap => {
+  componentWillMount() {   
+    const homeRef = firebase.database().ref().child('home');	
+    const introductionRef = homeRef.child('introduction');
+    introductionRef.on('value', snap => {
         this.setState({
-          speed: snap.val()
+          introduction: snap.val()
       });
     });
   }
-
+*/
   render() {
     return (
 		<header id="header">
@@ -38,31 +39,32 @@ class Header extends Component {
 						<li id="menu-item-portfolio">
 							<a title="Portfolio" href="/portfolio">PORTFOLIO</a>
 						</li>	
-						<li id="menu-item-blog">
-							<a title="Blog" href="/blog">BLOG</a>
-						</li>	
-						<li id="menu-item-github">
-							<a title="Github" href="/github">GITHUB</a>
-						</li>	
 						<li id="menu-item-contact">
 							<a title="Contact" href="/contact">CONTACT</a>
 						</li>																									
 					</ul>
 				</nav>
 			</div>
-			<HeaderMsg />
+			<HeaderMsg intro={this.props.introduction}/>
 		</header>
     );
   }
 }
 
-const HeaderMsg = () => {
+const HeaderMsg = ({intro}) => {
 	return (
 			<div>
-				<h2>Header Msg</h2>
+				<h2>{intro}</h2>
 			</div>
 	);
 };
 
+HeaderMsg.propTypes = {
+	intro: React.PropTypes.string.isRequired
+}
+
+Header.defaultProps = {
+	introduction: "Hi, my name is Kim JeongHyun. I am a Front-End Developer Who wants to upgrade myself everyday!"
+}
 
 export default Header;
