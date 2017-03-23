@@ -6,27 +6,41 @@ import * as firebase from 'firebase';
 
 class App extends Component {
 
-    render() {
-        const db = firebase.database();
-        const socialUrl = db.ref().child('socialUrl/facebook');
-        debugger;
+    constructor(props) {
+        super(props);
+        this.state = {
+            urlList : "123"
+        }
 
-        console.log(socialUrl);
-        socialUrl.on('value', snap=>{
-            console.log("2")
+        this._printDbInfo = this._printDbInfo.bind(this);
+    }
+
+    _printDbInfo() {
+        const db = firebase.database().ref().child('home');
+        const socialUrl = db.child('socialUrl');
+
+        socialUrl.on('value', snap => {
+            this.setState({
+                urlList : snap.val()
+            }) 
         });
-        
+    }
+
+    componentDidMount() {
+        this._printDbInfo();
+    }
+
+    render() {
+
         return (
             <div className="App">
                 <Header/>
                 {this.props.children}
-                {                    
-                    console.log("1")
-                }
-                <Footer />
+                <Footer urlList={this.state.urlList}/>
             </div>
         );
     }
+
 }
 
 export default App;
