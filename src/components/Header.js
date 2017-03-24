@@ -1,28 +1,9 @@
 import React, { Component } from 'react';
 import gjstamp from './GJstamp_star.svg';
 import './Header.css';
-//import * as firebase from 'firebase';
 
 class Header extends Component {
 
-/*
-  constructor() {
-    super();
-    this.state = {
-      introduction: ""
-    };
-  }
- 
-  componentWillMount() {   
-    const homeRef = firebase.database().ref().child('home');	
-    const introductionRef = homeRef.child('introduction');
-    introductionRef.on('value', snap => {
-        this.setState({
-          introduction: snap.val()
-      });
-    });
-  }
-*/
   render() {
     return (
 		<header id="header">
@@ -45,26 +26,31 @@ class Header extends Component {
 					</ul>
 				</nav>
 			</div>
-			<HeaderMsg intro={this.props.introduction}/>
+			<HeaderMsg intro1stRow={this.props.intro1stRow} intro2ndRow={this.props.intro2ndRow}/>
 		</header>
     );
   }
 }
 
-const HeaderMsg = ({intro}) => {
+const HeaderMsg = ({intro1stRow, intro2ndRow}) => {
 	return (
-			<div>
-				<h2>{intro}</h2>
+			<div className="intro">
+				<h2>{intro1stRow}</h2>
+				<br/>
+				<h2>{intro2ndRow}</h2>
 			</div>
 	);
 };
 
 HeaderMsg.propTypes = {
-	intro: React.PropTypes.string.isRequired
+	intro1stRow: React.PropTypes.string.isRequired,
+	intro2ndRow: React.PropTypes.string
 }
 
 Header.defaultProps = {
-	introduction: "Hi, my name is Kim JeongHyun. I am a Front-End Developer Who wants to upgrade myself everyday!"
+	intro1stRow: "Hi, my name is Kim JeongHyun.",
+	intro2ndRow: "I am a Front-End Developer Who wants to upgrade myself everyday!"
+
 }
 
 export default Header;

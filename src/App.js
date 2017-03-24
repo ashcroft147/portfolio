@@ -11,27 +11,26 @@ class App extends Component {
         this.state = {
             urlList : "123"
         }
-
         this._printDbInfo = this._printDbInfo.bind(this);
     }
 
     _printDbInfo() {
-        const db = firebase.database().ref().child('home');
-        const socialUrl = db.child('socialUrl');
-
+        const homeDb = firebase.database().ref().child('home');
+        const socialUrl = homeDb.child('socialUrl');
+ 
         socialUrl.on('value', snap => {
+            console.log(snap.val());
             this.setState({
                 urlList : snap.val()
             }) 
         });
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this._printDbInfo();
     }
 
     render() {
-
         return (
             <div className="App">
                 <Header/>
@@ -40,7 +39,6 @@ class App extends Component {
             </div>
         );
     }
-
 }
 
 export default App;

@@ -1,30 +1,23 @@
 import React, { Component } from 'react';
 import './Footer.css';
-//import * as firebase from 'firebase';
 
 class Footer extends Component {
-
-	constructor(props) {
-		super(props)
-
-		console.log(this.props.urlList);
-	}
 		
 	render() {
 		return (
 			<footer id="footer">
 				<div className="footer">
 					<div className="col-md-12 social row">
-						<a className="bg-facebook" href={this.props.facebook} target="_blank" title="facebook">
+						<a className="bg-facebook" href={this.props.urlList.facebook} target="_blank" title="facebook">
 							<i className="fa fa-facebook-square fa-5x"></i> 
 						</a>
-						<a className="bg-github" href={this.props.github} target="_blank" title="workpress">
+						<a className="bg-github" href={this.props.urlList.github} target="_blank" title="workpress">
 							<i className="fa fa-github fa-5x"></i> 
 						</a>
-						<a className="bg-tumblr" href={this.props.tumblr} target="_blank" title="tumblr">
+						<a className="bg-tumblr" href={this.props.urlList.tumblr} target="_blank" title="tumblr">
 							<i className="fa fa-tumblr-square fa-5x"></i> 
 						</a>	
-						<a className="bg-pinterest" href={this.props.pinterest} target="_blank" title="pinterest">
+						<a className="bg-pinterest" href={this.props.urlList.pinterest} target="_blank" title="pinterest">
 							<i className="fa fa-pinterest-square fa-5x"></i> 
 						</a>																
 					</div>
@@ -36,14 +29,5 @@ class Footer extends Component {
 			);
 		}
 }
-
-/*
-Footer.defaultProps = {
-	facebookUrl: "https://www.facebook.com/ashcroft147",
-	github: "https://github.com/ashcroft147",
-	tumblr: "https://www.tumblr.com/login",
-	pinterestUrl: "https://kr.pinterest.com/"
-}
-*/
 
 export default Footer;
