@@ -1,7 +1,23 @@
 #about {
-  text-align: center;
-  background-color: #ffffff;
-  height: 450px;
+  text-align: center; 
   padding: 20px;
   color: black;  
+}
+
+@media (min-width: 902px) { /* min-width: device의  해상도가 902px 이상인 경우 */
+	#about > .container {
+		max-width: 800px;
+	}
+}
+
+.my_photo {
+	max-width: 100%;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: darkred;
+}
+
+.wrapper {
+	background-color: #f5f6f7;
 }

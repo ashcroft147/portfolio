@@ -9,7 +9,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            urlList : "123"
+            urlList : ""
         }
         this._printDbInfo = this._printDbInfo.bind(this);
     }
