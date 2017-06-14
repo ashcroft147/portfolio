@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import gjstamp from './GJstamp_star.svg';
+
 import './Header.css';
+
 
 class Header extends Component {
 
@@ -12,16 +15,16 @@ class Header extends Component {
 				<nav id="nav" className="menu">
 					<ul id="menu-nav">
 						<li id="menu-item-home">
-							<a title="Home" href="/">HOME</a>
+							<Link title="Home" href="/">HOME</Link>
 						</li>
 						<li id="menu-item-about">
-							<a title="About" href="/about">ABOUT</a>
+							<Link title="About" href="/about">ABOUT</Link>
 						</li>
 						<li id="menu-item-portfolio">
-							<a title="Portfolio" href="/portfolio">PORTFOLIO</a>
+							<Link title="Portfolio" href="/portfolio">PORTFOLIO</Link>
 						</li>	
 						<li id="menu-item-contact">
-							<a title="Contact" href="/contact">CONTACT</a>
+							<Link title="Contact" href="/contact">CONTACT</Link>
 						</li>																									
 					</ul>
 				</nav>
